@@ -1,27 +1,50 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="logo-header">
+      <%= image_tag('logo.png', alt: 'Airbrake logo', class: 'img-round img-responsive center-block') %>
     </div>
-  <% end -%>
+    <div class="row notice">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 >hello</h1>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h1 class="text-center">Login to Your Account</h1></div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="form">
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name), id: 'login', remote: true) do |f| %>
+                  <div class="form-group" , place>
+                    <%= f.email_field :email, autofocus: true, class: 'form-control input-lg', placeholder: 'Email Address' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.password_field :password, autocomplete: 'off', class: 'form-control input-lg', placeholder: 'Password' %>
+                  </div>
+                  <div class="form-group">
+                    <span class="text-left text" id="remember_me">
+                      <%= check_box_tag('Remember me', value = '1', checked = false, class: 'check_box') %>
+                      <%= f.label :remember_me, class: 'remember_me_text' %>
 
-  <div class="actions">
-    <%= f.submit 'Log in' %>
+                    </span>
+                    <a href="#" class="text-right text" id="forgot_password">Forgot Password?</a>
+                    <div style="clear: both;"></div>
+                  </div>
+                  <div class="form-group">
+                    <%= f.submit 'Sign In', class: 'btn btn-block btn-primary btn-lg', data: {disable_with: 'Please wait...'}, :remote => true %>
+                  </div>
+              <% end %>
+            </div>
+            <p class="text-center bottom-text"> or <a href="#" class="sign_up_link">Sign Up</a> now and get started!</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-<% end %>
-<%= render 'devise/sessions/footer'%>
+<%= render 'devise/sessions/footer' %>
 <%= render 'devise/shared/links' %>
+
+
+

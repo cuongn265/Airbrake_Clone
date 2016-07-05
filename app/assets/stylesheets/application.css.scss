@@ -13,6 +13,160 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+  font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  background: url(background.jpg) no-repeat center center fixed;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  background-size: cover;
+  .text-left {
+    float: left;
+  }
+  .text-right {
+    float: right;
+    margin-top: 10px;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .sign_up_link {
+    font-size: larger;
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  .bottom-text {
+    color: #b8b8b8;
+  }
+
+  .logo-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  .panel.panel-default {
+    background-color: #333;
+    border: none;
+    .panel-heading {
+      border: none;
+      background-color: #3f3f3f;
+      h1 {
+        color: #fff;
+        font-size: 30px;
+        margin: 20px;
+      }
+    }
+    .panel-body {
+
+      .btn.btn-block.btn-primary.btn-lg {
+        font-size: 32px;
+        background-color: #ff8700;
+        border: #ff8700;
+        border-radius: 4px;
+        height: 70px;
+      }
+
+      background-color: #505050;
+      padding-top: 30px;
+
+      .form-control {
+        border: solid 1px #3f3f3f;
+        background-color: #616364;
+        background: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+
+        height: 70px;
+        color: #b8b8b8;
+        border-radius: 4px;
+      }
+      .form-control:focus {
+        background-color: #e5e5e5;
+        border: 1px solid #ff8700;
+        box-shadow: 0 0 8px #af5c00;
+        color: #6b6b6b;
+      }
+
+      #remember_me {
+        color: #fff;
+        text-shadow: 0 1px 0 #000000;
+      }
+
+      #forgot_password {
+        color: #fff;
+      }
+      .text {
+        color: #b8b8b8;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .check_box {
+        position: relative;
+        vertical-align: middle;
+      }
+      .remember_me_text {
+        margin-top: 10px;
+        position: relative;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .marketing-footer {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    span {
+      border-right: 1px solid #ffffff;
+      padding-right: 5px;
+      margin-right: 5px;
+      line-height: 1em;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      a {
+        color: #fff;
+      }
+    }
+    #last-span {
+      border-right: none;
+    }
+
+    #copyrights {
+      border-right: none;
+      margin-right: 20px;
+    }
+  }
+
+  .copyrights {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.1) url(footer_logo.png) no-repeat 0px -326px;
+    padding: 5px 10px 5px 35px;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-right: 20px;
+    border-right: none;
+  }
+  
+  h1 {
+    color: #fff;
+  }
+
+  .notice {
+    background-color: #ff8700;
+  }
+
+}
