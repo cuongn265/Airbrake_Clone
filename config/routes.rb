@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'pages/index'
+  root 'pages#index'
 
-  get 'pages/index'
-
-  devise_for :users
+  devise_for :users, controllers: {
+      sessions: 'users/sessions'
+  }
 
   devise_scope :user do
-    authenticated :user do
-      root 'pages#index', as: :authenticated_root
-    end
-
-    unauthenticated do
-      root 'devise/sessions#new', as: :unauthenticated_root
-    end
+    get '/login' => 'devise/sessions#new', as: 'login'
   end
 end
