@@ -11,4 +11,8 @@ module ApplicationHelper
     end
     nil
   end
+
+  def class_for_body
+    "#{controller_name}-#{action_name}"
+  end
 end

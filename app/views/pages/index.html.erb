@@ -1,5 +1,7 @@
-<h1>Welcome to our page</h1>
-
+<% content_for :title, 'Airbrake - The best bug tracker and error tracking software.' %>
 <% if user_signed_in? %>
+    <h1>Logged in successfully</h1>
     <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+<% else %>
+    <h1>Welcome to our page</h1>
 <% end %>

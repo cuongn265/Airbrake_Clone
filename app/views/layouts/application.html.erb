@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CloneAirbrakeApp</title>
+
+  <%= favicon_link_tag 'logo.png' %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <title><%= yield(:title) || '' %></title>>
 </head>
-<body>
-<div class="container">
-
-<!--<h1 id="notice"hello></h1>-->
-  <%= yield %>
-</div>
-</body>
+<%= content_tag :body, class: "#{class_for_body}" do %>
+    <div class="container">
+      <div class="notice-container">
+      </div>
+      <%= yield %>
+    </div>
+<% end %>
 </html>
