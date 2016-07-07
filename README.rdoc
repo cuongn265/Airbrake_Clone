@@ -1,28 +1,38 @@
-== README
+Repository for Airbrake Login page
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Prerequesites
 
-Things you may want to cover:
+You need to have installed:
 
-* Ruby version
+- SQLite
+- Git
+- Ruby 2.3.1p112
+- Bundle
 
-* System dependencies
+### Tutorials you may want to read
 
-* Configuration
+#### Install Rails on MacOSX
 
-* Database creation
+http://railsapps.github.io/installrubyonrails-mac.html
 
-* Database initialization
+#### Install Rails on Ubuntu
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://railsapps.github.io/installrubyonrails-ubuntu.html
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# Installation
+
+
+
+```bash
+git clone git@github.com:CSEugene/Airbrake_Clone.git
+cd Airbrake_Clone
+bundle
+bundle exec rake db:create db:migrate
+```
+
+# Running Tests
+
+```bash
+bundle exec rake test
+```
