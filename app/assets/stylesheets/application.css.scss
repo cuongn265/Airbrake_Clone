@@ -17,6 +17,7 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+
 .pages-index {
   background: url(background.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -28,20 +29,20 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif;
   .text-left {
     float: left;
   }
-
   .glyphicon {
     font-size: larger;
     vertical-align: bottom;
     color: #bf042f;
   }
-
   .notice-container {
-    margin: 20px auto auto auto;
+
+    margin: 20px auto auto;
     position: absolute;
+    //background-color: #F7F7F7;
     width: auto;
     height: auto;
     top: auto;
@@ -51,12 +52,15 @@ body {
     z-index: 10;
 
     #notice {
+      //display: none;
       position: relative;
       border-radius: 4px;
+
       padding: 25px;
       opacity: 0.9;
       background-color: #fff;
       text-align: center;
+
       margin-right: auto;
       margin-left: auto;
       width: 350px;
@@ -89,11 +93,9 @@ body {
   .login-form {
     float: none;
     margin: 0 auto;
-
     .panel.panel-default {
       background-color: #333;
       border: none;
-
       .panel-heading {
         border: none;
         background-color: #3f3f3f;
@@ -104,8 +106,8 @@ body {
         }
       }
       .panel-body {
-        background-color: #505050;
-        padding: 30px 40px 0;
+
+        padding: 0 40px 0 40px;
 
         .btn.btn-block.btn-primary.btn-lg {
           font-size: 32px;
@@ -115,17 +117,21 @@ body {
           height: 60px;
         }
 
+        background-color: #505050;
+        padding-top: 30px;
+
         .form-control {
           border: solid 1px #3f3f3f;
           background: rgba(255, 255, 255, 0.1) none repeat scroll 0% 0%;
           background-clip: border-box;
           background-origin: padding-box;
           background-size: auto auto;
+
           height: 60px;
           color: #b8b8b8;
           border-radius: 4px;
-        }
 
+        }
         .form-control:focus {
           background-color: #e5e5e5;
           border: 1px solid #ff8700;
@@ -141,7 +147,6 @@ body {
         #forgot_password {
           color: #fff;
         }
-
         .text {
           color: #b8b8b8;
           font-size: 13px;
