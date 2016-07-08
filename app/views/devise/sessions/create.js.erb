@@ -1,13 +1,10 @@
-//$(".notice-container").html("");
 $(".notice-container").append("<%= escape_javascript(render :partial => 'devise/sessions/alert' ) %>")
 
 $(document).on(function () {
   alert("ok");
 })
 
-
 $('[id="notice"]').slideDown().delay(1000).slideUp(function () {
   $(this).remove();
-
 });
 
